@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.header-carousel {
+  position: relative;
+}
+
+.carousel-image {
+  height: 100vh;
+  object-fit: cover;
+  width: 100%;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 80%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.carousel-caption h2 {
+  font-family: 'Protest Revolution', sans-serif;
+  font-size: 6rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+}
+
+.carousel-caption .logo {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+.carousel-caption p {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-family: "Cormorant Garamond", serif;
+}
+
+@media (max-width: 1024px) {
+  .carousel-caption h2 {
+    font-size: 5rem; /* Reduce font size on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-caption h2 {
+    font-size: 3rem; /* Further reduce font size on small screens */
+    white-space: normal; /* Allow wrapping for smaller screens */
+    overflow: visible; /* Allow the text to be fully displayed */
+  }
+  
+  .carousel-image {
+    height: 60vh; /* Reduce height on smaller screens */
+  }
+
+  .carousel-caption {
+    padding: 1rem;
+    max-width: 80%;
+    height: 220px;
+    top: 60%;
+  }
+
+  .carousel-caption p {
+    font-size: 1.2rem; /* Adjust paragraph size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-caption h2 {
+    font-size: 2rem; /* Smaller font for very small screens */
+  }
+
+  .carousel-image {
+    height: 50vh; /* Further reduce height for very small screens */
+  }
+}
+.carousel-image-container {
+  position: relative;
+}
+
+
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+  z-index: 1;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ensures caption appears above the overlay */
+}
